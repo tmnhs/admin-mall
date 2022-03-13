@@ -1,8 +1,8 @@
 package example
 
 import (
-	"github.com/tmnhs/admin-mall/server/global"
-	"github.com/tmnhs/admin-mall/server/model/example"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/example"
 	"github.com/pkg/errors"
 	"gorm.io/gorm"
 )

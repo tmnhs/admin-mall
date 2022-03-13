@@ -4,10 +4,10 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/tmnhs/admin-mall/server/global"
-	"github.com/tmnhs/admin-mall/server/model/common/request"
-	"github.com/tmnhs/admin-mall/server/model/system"
-	"github.com/tmnhs/admin-mall/server/model/system/response"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/common/request"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/system/response"
 	"gorm.io/gorm"
 )
 

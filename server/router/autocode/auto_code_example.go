@@ -1,8 +1,8 @@
 package autocode
 
 import (
-	v1 "github.com/tmnhs/admin-mall/server/api/v1"
-	"github.com/tmnhs/admin-mall/server/middleware"
+	v1 "github.com/flipped-aurora/gin-vue-admin/server/api/v1"
+	"github.com/flipped-aurora/gin-vue-admin/server/middleware"
 	"github.com/gin-gonic/gin"
 )
 

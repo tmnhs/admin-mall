@@ -1,11 +1,11 @@
 package system
 
 import (
-	"github.com/tmnhs/admin-mall/server/global"
-	"github.com/tmnhs/admin-mall/server/model/common/response"
-	"github.com/tmnhs/admin-mall/server/model/system"
-	"github.com/tmnhs/admin-mall/server/model/system/request"
-	"github.com/tmnhs/admin-mall/server/utils"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/common/response"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/system/request"
+	"github.com/flipped-aurora/gin-vue-admin/server/utils"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )

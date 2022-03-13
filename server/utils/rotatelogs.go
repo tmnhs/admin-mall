@@ -3,7 +3,7 @@ package utils
 import (
 	"os"
 
-	"github.com/tmnhs/admin-mall/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/natefinch/lumberjack"
 	"go.uber.org/zap/zapcore"
 )

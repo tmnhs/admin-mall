@@ -6,8 +6,8 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/tmnhs/admin-mall/server/global"
-	"github.com/tmnhs/admin-mall/server/model/system"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
 )
 
 type JwtService struct{}

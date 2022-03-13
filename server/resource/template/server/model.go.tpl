@@ -2,7 +2,7 @@
 package autocode
 
 import (
-	"github.com/tmnhs/admin-mall/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
 )
 
 // {{.StructName}} 结构体

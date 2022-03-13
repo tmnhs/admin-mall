@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/tmnhs/admin-mall/server/service/autocode"
-	"github.com/tmnhs/admin-mall/server/service/example"
-	"github.com/tmnhs/admin-mall/server/service/system"
+	"github.com/flipped-aurora/gin-vue-admin/server/service/autocode"
+	"github.com/flipped-aurora/gin-vue-admin/server/service/example"
+	"github.com/flipped-aurora/gin-vue-admin/server/service/system"
 )
 
 type ServiceGroup struct {

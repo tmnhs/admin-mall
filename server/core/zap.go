@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/tmnhs/admin-mall/server/global"
-	"github.com/tmnhs/admin-mall/server/utils"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/utils"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

@@ -1,9 +1,9 @@
 package router
 
 import (
-	"github.com/tmnhs/admin-mall/server/router/autocode"
-	"github.com/tmnhs/admin-mall/server/router/example"
-	"github.com/tmnhs/admin-mall/server/router/system"
+	"github.com/flipped-aurora/gin-vue-admin/server/router/autocode"
+	"github.com/flipped-aurora/gin-vue-admin/server/router/example"
+	"github.com/flipped-aurora/gin-vue-admin/server/router/system"
 )
 
 type RouterGroup struct {

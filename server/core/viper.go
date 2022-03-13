@@ -9,9 +9,9 @@ import (
 
 	"github.com/songzhibin97/gkit/cache/local_cache"
 
-	"github.com/tmnhs/admin-mall/server/global"
-	_ "github.com/tmnhs/admin-mall/server/packfile"
-	"github.com/tmnhs/admin-mall/server/utils"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	_ "github.com/flipped-aurora/gin-vue-admin/server/packfile"
+	"github.com/flipped-aurora/gin-vue-admin/server/utils"
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"

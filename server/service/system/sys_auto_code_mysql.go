@@ -1,8 +1,8 @@
 package system
 
 import (
-	"github.com/tmnhs/admin-mall/server/global"
-	"github.com/tmnhs/admin-mall/server/model/system/response"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/system/response"
 )
 
 var AutoCodeMysql = new(autoCodeMysql)

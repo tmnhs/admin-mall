@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/tmnhs/admin-mall/server/global"
-	"github.com/tmnhs/admin-mall/server/model/system/request"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/system/request"
 	"github.com/golang-jwt/jwt/v4"
 )
 

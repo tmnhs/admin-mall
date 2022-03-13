@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/tmnhs/admin-mall/server/middleware"
-	"github.com/tmnhs/admin-mall/server/plugin/email/api"
+	"github.com/flipped-aurora/gin-vue-admin/server/middleware"
+	"github.com/flipped-aurora/gin-vue-admin/server/plugin/email/api"
 	"github.com/gin-gonic/gin"
 )
 

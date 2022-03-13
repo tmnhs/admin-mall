@@ -1,7 +1,7 @@
 package example
 
 import (
-	"github.com/tmnhs/admin-mall/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
 )
 
 // file struct, 文件结构体

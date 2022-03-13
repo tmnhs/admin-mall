@@ -1,7 +1,7 @@
 package response
 
 import (
-	"github.com/tmnhs/admin-mall/server/model/system"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
 )
 
 type SysUserResponse struct {

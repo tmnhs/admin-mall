@@ -5,10 +5,10 @@ import (
 	"mime/multipart"
 	"strings"
 
-	"github.com/tmnhs/admin-mall/server/global"
-	"github.com/tmnhs/admin-mall/server/model/common/request"
-	"github.com/tmnhs/admin-mall/server/model/example"
-	"github.com/tmnhs/admin-mall/server/utils/upload"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/common/request"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/example"
+	"github.com/flipped-aurora/gin-vue-admin/server/utils/upload"
 )
 
 //@author: [piexlmax](https://github.com/piexlmax)

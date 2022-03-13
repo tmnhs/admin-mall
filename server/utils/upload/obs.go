@@ -1,7 +1,7 @@
 package upload
 
 import (
-	"github.com/tmnhs/admin-mall/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/huaweicloud/huaweicloud-sdk-go-obs/obs"
 	"github.com/pkg/errors"
 	"mime/multipart"

@@ -1,8 +1,8 @@
 package request
 
 import (
-	"github.com/tmnhs/admin-mall/server/model/autocode"
-	"github.com/tmnhs/admin-mall/server/model/common/request"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/autocode"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/common/request"
 )
 
 type {{.StructName}}Search struct{

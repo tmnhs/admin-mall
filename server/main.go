@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/tmnhs/admin-mall/server/core"
-	"github.com/tmnhs/admin-mall/server/global"
-	"github.com/tmnhs/admin-mall/server/initialize"
+	"github.com/flipped-aurora/gin-vue-admin/server/core"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/initialize"
 	"go.uber.org/zap"
 )
 

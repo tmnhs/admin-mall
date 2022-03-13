@@ -1,4 +1,4 @@
-module github.com/tmnhs/admin-mall/server
+module github.com/flipped-aurora/gin-vue-admin/server
 
 go 1.16
 
