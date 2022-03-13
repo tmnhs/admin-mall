@@ -51,19 +51,19 @@ cors:
       Content-Type
     allow-credentials: true
 db-list:
-- disable: false
-  type: ""
-  alias-name: ""
-  path: ""
-  port: ""
-  config: ""
-  db-name: ""
-  username: ""
-  password: ""
-  max-idle-conns: 10
-  max-open-conns: 100
-  log-mode: ""
-  log-zap: false
+  - disable: false
+    type: mysql
+    alias-name: hust_mall
+    path: 127.0.0.1
+    port: "3307"
+    config: charset=utf8mb4&parseTime=True&loc=Local
+    db-name: hust_mall
+    username: root
+    password: root
+    max-idle-conns: 10
+    max-open-conns: 100
+    log-mode: ""
+    log-zap: true
 email:
   to: xxx@qq.com
   port: 465
@@ -108,12 +108,12 @@ pgsql:
   log-mode: ""
   log-zap: false
 qiniu:
-  zone: ZoneHuaDong
-  bucket: ""
-  img-path: ""
+  zone: ZoneHuanan
+  bucket: ginvue
+  img-path: http://qny.tmnhs.top
   use-https: false
-  access-key: ""
-  secret-key: ""
+  access-key: 3v1jdAbn2NJ6tOS36ZKvYLDdobjFQjkecYkdKNBr
+  secret-key: ZjM5P7RFoLFO6-A-Hf0F6GYlmw-MORAEljeNPw70
   use-cdn-domains: false
 redis:
   db: 0
