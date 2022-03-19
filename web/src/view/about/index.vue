@@ -4,7 +4,7 @@
       <el-col :span="12">
         <el-card>
           <template #header>
-            <el-divider>gin-vue-admin</el-divider>
+            <el-divider>Amdin-Hust</el-divider>
           </template>
           <div>
             <el-row>

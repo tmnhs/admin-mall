@@ -14,7 +14,7 @@ import (
 type InitDBService struct{}
 
 // InitDB 创建数据库并初始化 总入口
-// Author [piexlmax](https://github.com/piexlmax)
+
 // Author [SliverHorn](https://github.com/SliverHorn)
 // Author [songzhibin97](https://github.com/songzhibin97)
 func (initDBService *InitDBService) InitDB(conf request.InitDB) error {

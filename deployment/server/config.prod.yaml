@@ -54,7 +54,7 @@ db-list:
   - disable: false
     type: mysql
     alias-name: hust_mall
-    path: 127.0.0.1
+    path: 114.55.178.217
     port: "3307"
     config: charset=utf8mb4&parseTime=True&loc=Local
     db-name: hust_mall
@@ -86,7 +86,7 @@ jwt:
 local:
   path: uploads/file
 mysql:
-  path: 127.0.0.1
+  path: 114.55.178.217
   port: "3307"
   config: charset=utf8mb4&parseTime=True&loc=Local
   db-name: admin_mall
@@ -117,13 +117,13 @@ qiniu:
   use-cdn-domains: false
 redis:
   db: 0
-  addr: 127.0.0.1:6379
+  addr: 114.55.178.217:6379
   password: ""
 system:
   env: public
   addr: 8888
   db-type: mysql
-  oss-type: local
+  oss-type: qiniu
   use-multipoint: false
   use-redis: false
   iplimit-count: 15000
@@ -148,7 +148,7 @@ timer:
 zap:
   level: info
   format: console
-  prefix: '[github.com/flipped-aurora/gin-vue-admin/server]'
+  prefix: '[admin_hust]'
   director: log
   showLine: true
   encode-level: LowercaseColorLevelEncoder

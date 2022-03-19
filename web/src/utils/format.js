@@ -1,6 +1,6 @@
 import { formatTimeToStr } from '@/utils/date'
 import { getDict } from '@/utils/dictionary'
-
+import moment from 'moment'
 export const formatBoolean = (bool) => {
   if (bool !== null) {
     return bool ? '是' : '否'
@@ -16,6 +16,12 @@ export const formatDate = (time) => {
     return ''
   }
 }
+//value 格式为13位unix时间戳
+//10位unix时间戳可通过value*1000转换为13位格式
+export const  formatUnixDate =(value) =>{
+  return moment(value).format('YYYY-MM-DD hh:mm:ss')
+};
+
 
 export const filterDict = (value, options) => {
   const rowLabel = options && options.filter(item => item.value === value)

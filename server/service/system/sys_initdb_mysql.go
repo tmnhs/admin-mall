@@ -30,7 +30,7 @@ func (initDBService *InitDBService) writeMysqlConfig(mysql config.Mysql) error {
 }
 
 // initMsqlDB 创建数据库并初始化 mysql
-// Author [piexlmax](https://github.com/piexlmax)
+
 // Author [SliverHorn](https://github.com/SliverHorn)
 // Author: [songzhibin97](https://github.com/songzhibin97)
 func (initDBService *InitDBService) initMsqlDB(conf request.InitDB) error {

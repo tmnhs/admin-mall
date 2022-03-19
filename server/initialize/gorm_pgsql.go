@@ -9,7 +9,7 @@ import (
 )
 
 // GormPgSql 初始化 Postgresql 数据库
-// Author [piexlmax](https://github.com/piexlmax)
+
 // Author [SliverHorn](https://github.com/SliverHorn)
 func GormPgSql() *gorm.DB {
 	p := global.GVA_CONFIG.Pgsql

@@ -123,7 +123,7 @@ system:
   env: public
   addr: 8888
   db-type: mysql
-  oss-type: local
+  oss-type: qiniu
   use-multipoint: false
   use-redis: false
   iplimit-count: 15000
@@ -148,7 +148,7 @@ timer:
 zap:
   level: info
   format: console
-  prefix: '[github.com/flipped-aurora/gin-vue-admin/server]'
+  prefix: '[admin_hust]'
   director: log
   showLine: true
   encode-level: LowercaseColorLevelEncoder
