@@ -18,24 +18,33 @@ fi
 #运行服务
 start() {
         echo -e "Begin to compile the project ---$PROJECTNAME"
+
         #编译go项目
         go mod tidy
         go build -o $PROJECTNAME main.go
         #赋予权限
         chmod  777  "$CURDIR/$PROJECTNAME"
         echo "Compilation completed"
-        echo "starting $PROJECTNAME,please waiting..."
+
+        echo -e  "starting project $PROJECTNAME,please waiting..."
+        sleep 2
         #后台运行项目
         nohup ./$PROJECTNAME -c=$ENVIRONMENT > $PROJECTLOGS/run.log 2>&1 &
+        #获取进程
+        pid=$(ps -ef | grep $prog | grep -v grep | awk '{print $2}')
+        echo -e  "\033[32mthe project is starting at process : $pid \033[0m"
         echo -e "ok"
 }
 #暂停服务
 stop(){
-        echo -e $"Stopping the project ---$prog: "
+        echo -e $"Stopping the project ---$prog "
+
         #获取进程
         pid=$(ps -ef | grep $prog | grep -v grep | awk '{print $2}')
         if [ "$pid" ]; then
-                echo -n $"kill process pid: $pid "
+#                echo -n $"killing process pid: $pid "
+                echo -e  "\033[32mkilling process pid: $pid... \033[0m"
+
                 #杀掉进程
                 kill -9 $pid
                 ret=0
@@ -53,7 +62,7 @@ stop(){
                 done
 
                 if [ "$ret" ]; then
-                        echo -e $"ok"
+                        echo -e $"the process stopped... "
                 else
                         echo -e $"no"
                 fi
