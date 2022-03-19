@@ -30,8 +30,12 @@ func Viper(path ...string) *viper.Viper {
 				config = configEnv
 				fmt.Printf("您正在使用GVA_CONFIG环境变量,config的路径为%v\n", config)
 			}
-		} else {
-			fmt.Printf("您正在使用命令行的-c参数传递的值,config的路径为%v\n", config)
+		} else if config == utils.Development {
+			config = utils.LocalConfig
+			fmt.Printf("您正在使用命令行的-c参数传递的值,development为本地开发环境,config的路径为%v\n", config)
+		} else if config == utils.Production {
+			config = utils.ProductConfig
+			fmt.Printf("您正在使用命令行的-c参数传递的值,production为生产环境,config的路径为%v\n", config)
 		}
 	} else {
 		config = path[0]
