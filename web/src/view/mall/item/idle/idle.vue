@@ -109,7 +109,7 @@
     </div>
     <el-dialog v-model="dialogFormVisible" :before-close="closeDialog" title="弹窗操作">
       <el-form :model="formData" label-position="right" label-width="80px">
-        <el-form-item label="用户id:">
+        <!-- <el-form-item label="用户id:">
           <el-input v-model.number="formData.uid" clearable placeholder="请输入" />
         </el-form-item>
         <el-form-item label="物品名称:">
@@ -169,7 +169,7 @@
           <el-select v-model="formData.tradeWay" placeholder="请选择" style="width:100%" clearable>
             <el-option v-for="(item,key) in tradeWayOptions" :key="key" :label="item.label" :value="item.value" />
           </el-select>
-        </el-form-item>
+        </el-form-item> -->
         <el-form-item label="是否已销售:">
           <el-switch v-model="formData.saleStatus" active-color="#13ce66" inactive-color="#ff4949" active-text="是" inactive-text="否" clearable ></el-switch>
         </el-form-item>

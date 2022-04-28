@@ -6,7 +6,7 @@ type Profile struct {
 	Gender    *int   `json:"gender" form:"gender" gorm:"column:gender;comment:;size:1;"`
 	AddressID int64  `json:"address" form:"address" gorm:"column:address_id;comment:;size:1;"`
 	IsOnline  int    `json:"isOnline" form:"isOnline" gorm:"column:is_online;comment:;size:1;"`
-	Status    int    `json:"status" from:"status" gorm:"column:status"`
+	Status    int    `json:"status" form:"status" gorm:"column:status"`
 }
 
 type UserStatisInfo struct {

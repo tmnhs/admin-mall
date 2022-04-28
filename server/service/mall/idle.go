@@ -49,7 +49,6 @@ func (idleItemService *IdleItemService) UpdateIdleItem(idleItem mallReq.ReqIdleI
 	if err != nil {
 		return err
 	}
-	idleItem.CreatedTime = time.Now().Unix() * 1000
 	idleItemGorm := &mall.IdleItemGorm{
 		IdleItem: idleItem.IdleItem,
 	}

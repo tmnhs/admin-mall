@@ -74,16 +74,8 @@
             </template>
         </el-table-column>
         <el-table-column align="left" label="订单备注" prop="note" width="120" />
-        <el-table-column align="left" label="是否已确认" prop="confirmStatus" width="120">
-                  <template #default="scope">
-                      <el-switch v-model="scope.row.confirmStatus" active-color="#13ce66" inactive-color="#ff4949"  clearable disabled></el-switch>
-                  </template>
-        </el-table-column>
-        <el-table-column align="left" label="是否已删除" prop="deleteStatus" width="120">
-                  <template #default="scope">
-                      <el-switch v-model="scope.row.deleteStatus" active-color="#13ce66" inactive-color="#ff4949"  clearable disabled></el-switch>
-                  </template>
-        </el-table-column>
+
+
         
         <el-table-column align="left" label="创建时间" prop="createdTime" width="200" >
             <template #default="scope">{{ formatUnixDate(scope.row.createdTime) }}</template>
@@ -140,12 +132,7 @@
         <el-form-item label="订单备注:">
           <el-input v-model="formData.note" clearable placeholder="请输入" />
         </el-form-item>
-        <el-form-item label="是否已确认:">
-          <el-switch v-model="formData.confirmStatus" active-color="#13ce66" inactive-color="#ff4949" active-text="是" inactive-text="否" clearable ></el-switch>
-        </el-form-item>
-        <el-form-item label="是否已删除:">
-          <el-switch v-model="formData.deleteStatus" active-color="#13ce66" inactive-color="#ff4949" active-text="是" inactive-text="否" clearable ></el-switch>
-        </el-form-item>
+
       </el-form>
       <template #footer>
         <div class="dialog-footer">
@@ -191,8 +178,6 @@ const formData = ref({
         tradeTime: 0,
         status: undefined,
         note: '',
-        confirmStatus: false,
-        deleteStatus: false,
         createdTime: 0,
         })
 
@@ -212,12 +197,6 @@ const onReset = () => {
 const onSubmit = () => {
   page.value = 1
   pageSize.value = 10
-  if (searchInfo.value.confirmStatus === ""){
-      searchInfo.value.confirmStatus=null
-  }
-  if (searchInfo.value.deleteStatus === ""){
-      searchInfo.value.deleteStatus=null
-  }
   getTableData()
 }
 
@@ -359,8 +338,6 @@ const closeDialog = () => {
         tradeTime: 0,
         status: undefined,
         note: '',
-        confirmStatus: false,
-        deleteStatus: false,
         createdTime: 0,
         }
 }

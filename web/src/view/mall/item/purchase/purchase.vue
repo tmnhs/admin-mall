@@ -53,7 +53,7 @@
         
         <el-table-column align="left" label="分类名" prop="categoryName" width="120" />
         <el-table-column align="left" label="排序权值" prop="sort" width="120" />
-        <el-table-column align="left" label="预估价格" prop="price" width="120" />
+        <el-table-column align="left" label="预估价格" prop="minPrice" width="120" />
         <el-table-column align="left" label="物品相关描述" prop="description" width="120" />
         <el-table-column align="left" label="交易方式" prop="tradeWay" width="120">
             <template #default="scope">
@@ -65,9 +65,9 @@
                       <el-switch v-model="scope.row.status" active-color="#13ce66" inactive-color="#ff4949"  clearable disabled></el-switch>
            </template>
         </el-table-column>
-        <el-table-column align="left" label="是否删除" prop="deleteStatus" width="120">
-             <template #default="scope">
-                      <el-switch v-model="scope.row.deleteStatus" active-color="#13ce66" inactive-color="#ff4949"  clearable disabled></el-switch>
+         <el-table-column align="left" label="是否上架" prop="publishStatus" width="120">
+            <template #default="scope">
+                      <el-switch v-model="scope.row.publishStatus" active-color="#13ce66" inactive-color="#ff4949"  clearable disabled></el-switch>
            </template>
         </el-table-column>
           <el-table-column align="left" label="创建时间" prop="createdTime" width="200" >
@@ -94,34 +94,12 @@
     </div>
     <el-dialog v-model="dialogFormVisible" :before-close="closeDialog" title="弹窗操作">
       <el-form :model="formData" label-position="right" label-width="80px">
-        <el-form-item label="用户id:">
-          <el-input v-model.number="formData.uid" clearable placeholder="请输入" />
-        </el-form-item>
-        <el-form-item label="物品名称:">
-          <el-input v-model="formData.name" clearable placeholder="请输入" />
-        </el-form-item>
-        <el-form-item label="分类id:">
-          <el-input v-model.number="formData.categoryId" clearable placeholder="请输入" />
-        </el-form-item>
-        <el-form-item label="排序权值:">
-          <el-input v-model.number="formData.sort" clearable placeholder="请输入" />
-        </el-form-item>
-        <el-form-item label="预估价格:">
-          <el-input-number v-model="formData.price"  style="width:100%" :precision="2" clearable />
-        </el-form-item>
-        <el-form-item label="物品相关描述:">
-          <el-input v-model="formData.description" clearable placeholder="请输入" />
-        </el-form-item>
-        <el-form-item label="交易方式:">
-          <el-select v-model="formData.tradeWay" placeholder="请选择" style="width:100%" clearable>
-            <el-option v-for="(item,key) in tradeWayOptions" :key="key" :label="item.label" :value="item.value" />
-          </el-select>
-        </el-form-item>
-        <el-form-item label="是否已购得:">
+       <el-form-item label="是否已购得:">
           <el-switch v-model="formData.status" active-color="#13ce66" inactive-color="#ff4949" active-text="是" inactive-text="否" clearable ></el-switch>
         </el-form-item>
-        <el-form-item label="是否删除:">
-          <el-switch v-model="formData.deleteStatus" active-color="#13ce66" inactive-color="#ff4949" active-text="是" inactive-text="否" clearable ></el-switch>
+
+        <el-form-item label="是否上架:">
+          <el-switch v-model="formData.publishStatus" active-color="#13ce66" inactive-color="#ff4949" active-text="是" inactive-text="否" clearable ></el-switch>
         </el-form-item>
       </el-form>
       <template #footer>
@@ -163,11 +141,11 @@ const formData = ref({
         name: '',
         categoryId: 0,
         sort: 0,
-        price: 0,
+        minPrice: 0,
         description: '',
         tradeWay: undefined,
         status: false,
-        deleteStatus: false,
+        publishStatus: false,
         createdTime: 0,
         })
 
@@ -190,8 +168,8 @@ const onSubmit = () => {
   if (searchInfo.value.status === ""){
       searchInfo.value.status=null
   }
-  if (searchInfo.value.deleteStatus === ""){
-      searchInfo.value.deleteStatus=null
+  if (searchInfo.value.publishStatus === ""){
+      searchInfo.value.publishStatus=null
   }
   getTableData()
 }
@@ -329,11 +307,11 @@ const closeDialog = () => {
         name: '',
         categoryId: 0,
         sort: 0,
-        price: 0,
+        minPrice: 0,
         description: '',
         tradeWay: undefined,
         status: false,
-        deleteStatus: false,
+      publishStatus: false,
         createdTime: 0,
         }
 }

@@ -1,6 +1,7 @@
 package mall
 
 import (
+	"fmt"
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/flipped-aurora/gin-vue-admin/server/model/common/request"
 	"github.com/flipped-aurora/gin-vue-admin/server/model/common/response"
@@ -88,6 +89,7 @@ func (purchaseItemApi *PurchaseItemApi) DeletePurchaseItemByIds(c *gin.Context) 
 func (purchaseItemApi *PurchaseItemApi) UpdatePurchaseItem(c *gin.Context) {
 	var purchaseItem mall.PurchaseItem
 	_ = c.ShouldBindJSON(&purchaseItem)
+	fmt.Println(purchaseItem)
 	if err := purchaseItemService.UpdatePurchaseItem(purchaseItem); err != nil {
 		global.GVA_LOG.Error("更新失败!", zap.Error(err))
 		response.FailWithMessage("更新失败", c)
@@ -132,6 +134,8 @@ func (purchaseItemApi *PurchaseItemApi) GetPurchaseItemList(c *gin.Context) {
 		global.GVA_LOG.Error("获取失败!", zap.Error(err))
 		response.FailWithMessage("获取失败", c)
 	} else {
+		fmt.Println(list)
+
 		response.OkWithDetailed(response.PageResult{
 			List:     list,
 			Total:    total,

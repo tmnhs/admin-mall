@@ -19,7 +19,7 @@ export const formatDate = (time) => {
 //value 格式为13位unix时间戳
 //10位unix时间戳可通过value*1000转换为13位格式
 export const  formatUnixDate =(value) =>{
-  return moment(value).format('YYYY-MM-DD hh:mm:ss')
+  return moment(value*1000).format('YYYY-MM-DD hh:mm:ss')
 };
 
 

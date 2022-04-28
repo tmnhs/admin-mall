@@ -75,7 +75,7 @@
          <el-table-column align="left" label="创建时间" prop="createdTime" width="200" >
             <template #default="scope">{{ formatUnixDate(scope.row.createdTime) }}</template>
         </el-table-column>
-          <el-table-column align="left" label="创建时间" prop="expirationTime" width="200" >
+          <el-table-column align="left" label="过期时间" prop="expirationTime" width="200" >
             <template #default="scope">{{ formatUnixDate(scope.row.expirationTime) }}</template>
         </el-table-column>
         <el-table-column align="left" label="按钮组" width="120">

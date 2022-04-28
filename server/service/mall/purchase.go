@@ -33,6 +33,8 @@ func (purchaseItemService *PurchaseItemService) DeletePurchaseItemByIds(ids requ
 // UpdatePurchaseItem 更新PurchaseItem记录
 func (purchaseItemService *PurchaseItemService) UpdatePurchaseItem(purchaseItem mall.PurchaseItem) (err error) {
 	purchaseItem.UpdatedTime = time.Now().Unix() * 1000
+	//err = global.GVA_DBList[MallDataBase].Table(PurchaseItemTableName).Where("uid = ?",purchaseItem.Uid).Updates(map[string]interface{}{
+	//	"publish_status": purchaseItem.PublishStatus}).Error
 	err = global.GVA_DBList[MallDataBase].Table(PurchaseItemTableName).Save(&purchaseItem).Error
 	return err
 }

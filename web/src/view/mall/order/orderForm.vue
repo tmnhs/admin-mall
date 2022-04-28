@@ -33,12 +33,7 @@
         <el-form-item label="订单备注:">
           <el-input v-model="formData.note" clearable placeholder="请输入" />
         </el-form-item>
-        <el-form-item label="是否已确认:">
-          <el-switch v-model="formData.confirmStatus" active-color="#13ce66" inactive-color="#ff4949" active-text="是" inactive-text="否" clearable ></el-switch>
-        </el-form-item>
-        <el-form-item label="是否已删除:">
-          <el-switch v-model="formData.deleteStatus" active-color="#13ce66" inactive-color="#ff4949" active-text="是" inactive-text="否" clearable ></el-switch>
-        </el-form-item>
+
         <el-form-item>
           <el-button size="mini" type="primary" @click="save">保存</el-button>
           <el-button size="mini" type="primary" @click="back">返回</el-button>
@@ -81,8 +76,6 @@ const formData = ref({
         tradeTime: 0,
         status: undefined,
         note: '',
-        confirmStatus: false,
-        deleteStatus: false,
         createdTime: 0,
         })
 
